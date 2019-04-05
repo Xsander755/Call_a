@@ -1,0 +1,20 @@
+{
+    "name": "КАЛЕНДАРЬ",
+    "main": "index.html",
+    "description": "demo app of node-webkit",
+    "version": "0.1.0",
+    "keywords": [ "demo", "node-webkit" ],
+
+    "window": {
+        "icon": "app.icns",
+        "toolbar": false,
+        "frame": true,
+        "width": 260,
+        "height": 260,
+        "position": "center",
+        "resizable":false
+    },
+    "webkit": {
+        "plugin": true
+    }
+}

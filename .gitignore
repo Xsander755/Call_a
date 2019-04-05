@@ -1,0 +1,12 @@
+/build
+/dist
+/node_modules
+/.idea
+/.grunt
+/.cache
+*.iml
+*.zip
+*.DS_Store
+Thumbs.db
+_SpecRunner.html
+npm-debug.log

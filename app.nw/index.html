@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:600&amp;subset=latin" rel="stylesheet" type="text/css">
+    <script src="js/moment.min.js"></script>
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>календарь</title>
+</head>
+
+<body>
+    <div id="call" class="call">
+        <div class="splash">
+            <div id="mc" class="mc"></div>
+        </div>
+        <div id="clock"></div>
+        <div id="chislo" class="chislo"></div>
+        <div id="slplashs"></div>
+    </div>
+
+    <script>
+        moment.locale("ru");
+        var mc = document.getElementById('mc');
+        var chislo = document.getElementById('chislo');
+        var clock = document.getElementById('clock');
+        var dt = moment().format('DD');
+        var ms = moment().format('MMMM');
+        var clocks = moment().format('LTS');
+        chislo.innerHTML = dt;
+        mc.innerHTML = ms;
+        clock.innerText = clocks;
+        window.onload = function() {
+            setInterval(function() {
+                var dt = moment().format('DD');
+                var ms = moment().format('MMMM');
+                var clocks = moment().format('LTS');
+                chislo.innerHTML = dt;
+                mc.innerHTML = ms;
+                clock.innerText = clocks;
+                console.log(clocks);
+            }, 1000);
+        }
+
+
+    </script>
+</body>
+
+</html>
